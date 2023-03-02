@@ -1,0 +1,18 @@
+git clone https://github.com/openstack/magnum-ui
+pip3 install -e ~/magnum-ui/
+
+
+cd /usr/share/openstack-dashboard
+
+cp /home/controller/Desktop/magnum-ui/magnum_ui/enabled/_1370_project_container_infra_panel_group.py openstack_dashboard/local/enabled
+cp /home/controller/Desktop/magnum-ui/magnum_ui/enabled/_1371_project_container_infra_clusters_panel.py openstack_dashboard/local/enabled
+cp /home/controller/Desktop/magnum-ui/magnum_ui/enabled/_1372_project_container_infra_cluster_templates_panel.py openstack_dashboard/local/enabled
+
+DJANGO_SETTINGS_MODULE=openstack_dashboard.settings python3 manage.py collectstatic --noinput   
+DJANGO_SETTINGS_MODULE=openstack_dashboard.settings python3 manage.py compress --force
+
+
+service apache2 restart
+
+
+
