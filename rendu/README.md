@@ -1,10 +1,13 @@
 👨‍💻Travail à faire (Services avancés)
 Chahnez Sardouk
 •
-12 avr.
+7 avr.
 100 points
-Date limite : Hier 23:59
+Date limite : 23:59
 Réaliser les services suivants :
-List<Abonnement> retrieveSubscriptionsByDates(LocalDate startDate, LocalDate endDate);
-Inscription addRegistrationAndAssignToSkierAndCourse(Inscription inscription, Long numSkieur, Long numCours);
-List<Integer> numWeeksCourseOfInstructorBySupport(Long numInstructor, Support support);
+-Skieur assignSkierToPiste(Long numSkieur, Long numPiste);
+-Moniteur addInstructorAndAssignToCourse(Moniteur moniteur, Long numCourse);   
+-Skier addSkierAndAssignToCourse(Skier skier, Long numCourse);
+-Skier addSkierAndAssignToCourse(Skier skier, Long numCourse);   
+-List retrieveSkiersBySubscriptionType(TypeAbonnement typeAbonnement); 
+-Set getSubscriptionByType(TypeSubscription type)
